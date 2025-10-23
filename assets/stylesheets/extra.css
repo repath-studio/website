@@ -21,14 +21,6 @@
     font-display: fallback;
     src: url(/assets/fonts/Sora/static/Sora-Bold.ttf) format('truetype');
  }
-
- @font-face {
-    font-family: 'Sora';
-    font-style: normal;
-    font-weight: 800;
-    font-display: fallback;
-    src: url(/assets/fonts/Sora/static/Sora-ExtraBold.ttf) format('truetype');
- }
   
 :root {
     --md-primary-fg-color:        #97124c;
@@ -43,10 +35,6 @@ body {
 .md-header__title,
 .md-nav__title {
     font-weight: 600 !important;
-}
-
-.md-header__topic:first-child {
-    font-weight: 800;
 }
 
 .md-tabs__link {
