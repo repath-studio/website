@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="640" height="320" version="1.1" viewBox="0 0 640 320" xmlns="http://www.w3.org/2000/svg">
  <defs>
   <linearGradient id="linearGradient11" x1="1516.3" x2="1570.6" y1="732.63" y2="732.63" gradientTransform="matrix(.27914 0 0 .27914 -370.12 -136.77)" gradientUnits="userSpaceOnUse">
@@ -7,11 +8,8 @@
  </defs>
  <rect width="640" height="320" rx="0" ry="0" fill="#dd286c" stop-color="#000000" stroke-width=".99951" style="-inkscape-stroke:none;font-variation-settings:normal"/>
  <rect x="-156.56" y="-400.73" width="9.2271e-6" height="8.3046e-5" rx="89.172" ry="8.3046e-5" fill="#040002" stroke-width="4.1823" style="-inkscape-stroke:none"/>
- <g transform="translate(.00018181 -.095469)">
-  <g transform="matrix(1.2634 0 0 1.2634 233.7 51.212)">
-   <path d="m68.309 28.481a39.256 39.256 0 0 0-39.256 39.256 39.256 39.256 0 0 0 0.0041 0.06379h-0.0041v39.192h24.096v-3.1197a39.256 39.256 0 0 0 15.16 3.1197 39.256 39.256 0 0 0 39.256-39.256 39.256 39.256 0 0 0-39.256-39.256zm0 24.096a15.16 15.16 0 0 1 15.16 15.16 15.16 15.16 0 0 1-15.16 15.16 15.16 15.16 0 0 1-15.16-15.16 15.16 15.16 0 0 1 15.16-15.16z" fill="#fff" stroke-width=".27914" style="-inkscape-stroke:none;font-variation-settings:normal"/>
-   <path d="m53.152 67.734v36.138a39.256 39.256 0 0 0 15.16 3.1197 39.256 39.256 0 0 0 39.256-39.256 39.256 39.256 0 0 0 0-4.99e-4h-24.096a15.16 15.16 0 0 1 0 4.99e-4 15.16 15.16 0 0 1-15.16 15.16 15.16 15.16 0 0 1-15.16-15.16 15.16 15.16 0 0 1 0-4.99e-4z" fill="url(#linearGradient11)" stop-color="#000000" stroke-width="1.0289" style="-inkscape-stroke:none;font-variation-settings:normal"/>
-  </g>
-  <text x="418.89673" y="227.65109" dominant-baseline="auto" fill="#ffffff" font-family="Sora" font-size="26.732px" font-weight="800" stop-color="#000000" stroke-width=".65151" text-align="end" text-anchor="end" style="-inkscape-stroke:none;font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;font-variation-settings:normal;line-height:1.25;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:pre" xml:space="preserve"><tspan x="418.89673" y="227.65109" stroke-width=".65151" text-align="end" text-anchor="end">Repath Studio</tspan></text>
+ <g transform="matrix(1.8971 0 0 1.8971 190.41 31.495)">
+  <path d="m68.309 28.481a39.256 39.256 0 0 0-39.256 39.256 39.256 39.256 0 0 0 0.0041 0.06379h-0.0041v39.192h24.096v-3.1197a39.256 39.256 0 0 0 15.16 3.1197 39.256 39.256 0 0 0 39.256-39.256 39.256 39.256 0 0 0-39.256-39.256zm0 24.096a15.16 15.16 0 0 1 15.16 15.16 15.16 15.16 0 0 1-15.16 15.16 15.16 15.16 0 0 1-15.16-15.16 15.16 15.16 0 0 1 15.16-15.16z" fill="#fff" stroke-width=".27914" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+  <path d="m53.152 67.734v36.138a39.256 39.256 0 0 0 15.16 3.1197 39.256 39.256 0 0 0 39.256-39.256 39.256 39.256 0 0 0 0-4.99e-4h-24.096a15.16 15.16 0 0 1 0 4.99e-4 15.16 15.16 0 0 1-15.16 15.16 15.16 15.16 0 0 1-15.16-15.16 15.16 15.16 0 0 1 0-4.99e-4z" fill="url(#linearGradient11)" stop-color="#000000" stroke-width="1.0289" style="-inkscape-stroke:none;font-variation-settings:normal"/>
  </g>
 </svg>
