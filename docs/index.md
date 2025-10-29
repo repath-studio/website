@@ -53,7 +53,7 @@ hide:
     ---
 
     Distributed under the terms of the
-    [AGPL-3.0](https://github.com/repath-project/repath-studio/blob/main/LICENSE) license.
+    [AGPL-3.0](/policies/license) license.
 
 </div>
 
