@@ -2,74 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://repath.studio/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/blog/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/blog/2025/09/25/a-quick-ui-progress-recap/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/blog/2025/09/12/nlnet-quarterly-update/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/contribute/CLA/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/contribute/CODE_OF_CONDUCT/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/contribute/contributing/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/contribute/translate/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/get-started/build-from-source/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/get-started/download/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/get-started/interactive-shell/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/get-started/shortcuts/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/policies/privacy/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://repath.studio/policies/security/</loc>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/roadmap/changelog/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/roadmap/milestones/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/blog/archive/2025/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/blog/category/devlog/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://repath.studio/blog/category/nlnet-funding/</loc>
-         <lastmod>2025-10-28</lastmod>
+         <lastmod>2025-10-29</lastmod>
     </url>
 </urlset>

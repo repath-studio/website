@@ -1,6 +1,21 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
 Contact: mailto:contact@repath.studio
 Preferred-Languages: en
-Expires: 2023-03-26
-Encryption: https://repath.studio/pgp.asc
-Signature: https://repath.studio/security.txt.sig
+Expires: 2026-10-29
+Policy: https://repath.studio/policies/security/
+Encryption: https://repath.studio/pgp-publickey.txt
 Canonical: https://repath.studio/security.txt
+
+-----BEGIN PGP SIGNATURE-----
+
+iQEzBAEBCgAdFiEELMa6z3poEQpvFMhV4tO6ReBHx7YFAmkBtSYACgkQ4tO6ReBH
+x7abuAf/aKW1tPW1gtqObEpLQMWYhSLPaALISsn9ETDKsoLbbfoVHiTd4DCtexzI
+8SeBozbopO8rTd1+l3+TmBy8WRY3dUPm2DHYrKP7RvkLVbbPc7v5dkoQvm9QJASt
+A6FsfM7fJNJGpu00WFheK2L3JuSvLhVj1DDsw7wbObPiV0yAgW39v5lFrsLoZ+xX
+0ns5J6RNTN2Y3WhjPb1JEXqIlNHYNSpNq0vjY3z46esrDIwAgZYU0B8fAtfK6Wui
+QICWQwqFDl9HIERX2CkBOdyliPlXzfMV3WeJrZj1BbJb62HfBO1wbfnISil/0uxP
+W4F8W3Uy5skQJzsNrRAkaUaoH2cp0w==
+=U6wS
+-----END PGP SIGNATURE-----
