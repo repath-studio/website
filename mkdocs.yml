@@ -21,6 +21,7 @@ theme:
   - announce.dismiss
   - navigation.instant
   - navigation.footer
+  - content.code.copy
   icon:
     repo: fontawesome/brands/github
   logo: assets/images/logo.svg
