@@ -23,7 +23,7 @@
                 "url": "https://github.com/repath-project/repath-studio"
             },
             "licenses": ["spdx:AGPL-3.0-or-later"],
-            "tags": ["svg", "design", "clojure", "clojurescript", "animation", "graphics", "vector", "image-manipulation", "generative-art", "vector-graphics", "ux-design", "design-tool", "procedural-art", "parametric-design"]
+            "tags": ["svg", "design", "animation", "generative-art", "vector-graphics", "ux-design", "design-tool", "procedural-art", "parametric-design"]
         }
     ],
     "funding": {
