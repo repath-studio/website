@@ -1,0 +1,82 @@
+{
+    "version": "v1.0.0",
+    "entity": {
+        "type": "individual",
+        "role": "owner",
+        "name": "Konstantinos Kaloutas",
+        "email": "sprocketc@gmail.com",
+        "phone": "",
+        "description": "Creator and maintainer of Repath Studio.",
+        "webpageUrl": {
+            "url": "https://github.com/sprocketc"
+        }
+    },
+    "projects": [
+        {
+            "guid": "repath-studio",
+            "name": "Repath Studio",
+            "description": "A cross-platform vector graphics editor, that combines procedural tooling with traditional design workflows.",
+            "webpageUrl": {
+                "url": "https://repath.studio/"
+            },
+            "repositoryUrl": {
+                "url": "https://github.com/repath-project/repath-studio"
+            },
+            "licenses": ["spdx:AGPL-3.0-or-later"],
+            "tags": ["svg", "design", "clojure", "clojurescript", "animation", "graphics", "vector", "image-manipulation", "generative-art", "vector-graphics", "ux-design", "design-tool", "procedural-art", "parametric-design"]
+        }
+    ],
+    "funding": {
+        "channels": [
+            {
+                "guid": "github-sponsors",
+                "type": "payment-provider",
+                "address": "https://github.com/sponsors/repath-project",
+                "description": "Sponsor Repath Studio through GitHub."
+            }
+        ],
+        "plans": [
+            {
+                "guid": "bronze",
+                "status": "active",
+                "name": "Bronze",
+                "description": "",
+                "amount": 5,
+                "currency": "USD",
+                "frequency": "monthly",
+                "channels": ["github-sponsors"]
+            },
+            {
+                "guid": "silver",
+                "status": "active",
+                "name": "Silver",
+                "description": "",
+                "amount": 25,
+                "currency": "USD",
+                "frequency": "monthly",
+                "channels": ["github-sponsors"]
+            },
+            {
+                "guid": "gold",
+                "status": "active",
+                "name": "Gold",
+                "description": "",
+                "amount": 100,
+                "currency": "USD",
+                "frequency": "monthly",
+                "channels": ["github-sponsors"]
+            },
+            {
+                "guid": "one-time",
+                "status": "active",
+                "name": "Onetime",
+                "description": "",
+                "amount": 50,
+                "currency": "USD",
+                "frequency": "one-time",
+                "channels": ["github-sponsors"]
+            }
+        ],
+        "history": []
+    }
+}
