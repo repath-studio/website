@@ -35,7 +35,7 @@ nav:
   - Get Started:
     - get-started/download.md
     - get-started/shortcuts.md
-    - get-started/interactive-shell.md
+    - Interactive Shell: get-started/interactive-shell.md
   - Contribute:
     - Develop: contribute/contributing.md
     - Code of Conduct: contribute/CODE_OF_CONDUCT.md
