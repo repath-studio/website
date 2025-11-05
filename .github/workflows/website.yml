@@ -32,10 +32,10 @@ jobs:
 
       - run: npm install
       - run: node ./node_modules/roadmap-generator/index.js ./roadmap.conf.js ${{ secrets.PERSONAL_ACCESS_TOKEN }} -gs > ./docs/roadmap/milestones.md
-      - run: curl https://raw.githubusercontent.com/repath-project/repath-studio/main/CHANGELOG.md > ./docs/roadmap/changelog.md
-      - run: curl https://raw.githubusercontent.com/repath-project/repath-studio/main/CONTRIBUTING.md > ./docs/contribute/contributing.md
-      - run: curl https://raw.githubusercontent.com/repath-project/repath-studio/main/CODE_OF_CONDUCT.md > ./docs/contribute/CODE_OF_CONDUCT.md
-      - run: curl https://raw.githubusercontent.com/repath-project/repath-studio/main/CLA.md > ./docs/contribute/CLA.md
-      - run: curl https://raw.githubusercontent.com/repath-project/repath-studio/main/SECURITY.md > ./docs/policies/security.md
+      - run: curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/CHANGELOG.md > ./docs/roadmap/changelog.md
+      - run: curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/CONTRIBUTING.md > ./docs/contribute/contributing.md
+      - run: curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/CODE_OF_CONDUCT.md > ./docs/contribute/CODE_OF_CONDUCT.md
+      - run: curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/CLA.md > ./docs/contribute/CLA.md
+      - run: curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/SECURITY.md > ./docs/policies/security.md
       - run: pip install mkdocs-material=="9.6.20" "mkdocs-material[imaging]" mkdocs-glightbox mkdocs-git-revision-date-localized-plugin
       - run: mkdocs gh-deploy --clean --force

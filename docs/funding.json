@@ -20,7 +20,7 @@
                 "url": "https://repath.studio/"
             },
             "repositoryUrl": {
-                "url": "https://github.com/repath-project/repath-studio"
+                "url": "https://github.com/repath-studio/repath-studio"
             },
             "licenses": ["spdx:AGPL-3.0-or-later"],
             "tags": ["svg", "design", "animation", "generative-art", "vector-graphics", "ux-design", "design-tool", "procedural-art", "parametric-design"]
@@ -31,7 +31,7 @@
             {
                 "guid": "github-sponsors",
                 "type": "payment-provider",
-                "address": "https://github.com/sponsors/repath-project",
+                "address": "https://github.com/sponsors/repath-studio",
                 "description": "Sponsor Repath Studio through GitHub."
             }
         ],
