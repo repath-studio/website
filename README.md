@@ -6,11 +6,11 @@
 
 Install MkDocs Material
 ```
-pip install mkdocs-material
+npm run install-python-deps
 ```
 https://squidfunk.github.io/mkdocs-material/getting-started/
 
 ## How to Run
 ```
-mkdocs serve
+npm run dev
 ```

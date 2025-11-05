@@ -5,6 +5,11 @@
   "author": "Konstantinos Kaloutas",
   "homepage": "https://repath.studio",
   "version": "1.0.0",
+  "scripts": {
+    "install-python-deps": "pip install mkdocs-material==\"9.6.20\" \"mkdocs-material[imaging]\" mkdocs-glightbox mkdocs-git-revision-date-localized-plugin",
+    "dev": "mkdocs serve", 
+    "deploy": "mkdocs gh-deploy --clean --force",
+    "sync-docs": "curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/CHANGELOG.md > ./docs/roadmap/changelog.md && curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/CONTRIBUTING.md > ./docs/contribute/contributing.md && curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/CODE_OF_CONDUCT.md > ./docs/contribute/CODE_OF_CONDUCT.md && curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/CLA.md > ./docs/contribute/CLA.md && curl https://raw.githubusercontent.com/repath-studio/repath-studio/main/SECURITY.md > ./docs/policies/security.md"},
   "devDependencies": {
     "roadmap-generator": "0.0.3"
   }
