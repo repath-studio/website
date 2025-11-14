@@ -5,21 +5,35 @@ you visit our website, or when use our application.
 
 ## What data do we collect?
 
-We may send anonymous error reports when you use the application (desktop or web).
+We track visits on our main website (repath.studio) using
+[GoatCounter](https://www.goatcounter.com/), a privacy-aware web analytics platform that
+doesn’t track users with unique identifiers. The following information is stored in
+this way:
+
+- Browsers, based on headers sent by the browser (e.g. Firefox 139, Chrome 102)
+- Systems, based on headers sent by the browser (e.g. Windows 11, macOS 15.2).
+- Country (e.g. Indonesia, Canada).
+- Languages (e.g. English, Klingon).
+- Screen size (e.g. 768, 1920).
+
+We may also send anonymous error reports when you use the application (desktop or web).
 Typically, an error report may contain the following:
 
-- The error message that occurred
+- The error message that occurred.
 - Information about the use of the app immediately before the incident and when the app
-  was started
-- Date and time of the incident
-- Device information: operating system and version, app version and device model
+  was started.
+- Date and time of the incident.
+- Device information: operating system and version, app version and device model.
 - Status of the device: battery charge and temperature, charging state, boot time, memory
   space and connection type (Wi-Fi/mobile data), (free) storage space, preferred language,
-  device orientation, screen resolution and density, time zone
+  device orientation, screen resolution and density, time zone.
 
 ## How do we collect your data?
 
-Errors are automatically reported when something goes wrong.
+Web visits are stored when you visit the main website. Errors are automatically reported
+when something goes wrong while using the application. When you use the application for
+the first time, you will be notified about this and you will have the option to enable or
+disable error reports. We also offer the ability to change this option at any time.
 
 ## How will we use your data?
 
@@ -30,28 +44,33 @@ unless it is required by law or in order to fulfil a legal obligation.
 
 ## How do we store your data?
 
-We use [Sentry](https://sentry.io) to store error reports in the EU. For more information,
-see [Sentry's Data Storage Location](https://docs.sentry.io/organization/data-storage-location/).
+We do not store any data directly. GoatCounter's analytics Data is stored on servers at
+Hetzner Online GmbH in Finland and Germany. Sentry's error reports are also stored in the
+EU. For more information, see [Sentry's Data Storage Location](https://docs.sentry.io/organization/data-storage-location/).
 
 ## How can you access or delete this data?
 
-Since we try to anonymize the error data as much as possible, there is no reliable way to
-find your data. When you use the application for the first time, you will be notified
-about this and you will have the option to enable or disable error reports. We also offer
-the ability to change this option at any time.
+Since we try to anonymize reported data as much as possible, there is no reliable way to
+find your data.
 
-Error events will be automatically deleted after 90 days. For more information, see
+Error events will be automatically deleted after 90 days. For more information, see 
 [Sentry's Data Retention Periods](https://docs.sentry.io/security-legal-pii/security/data-retention-periods/).
+
+Analytics information is stored as separate “aggregate” tables per day or hour, with no
+way to link data between them. Web visits are also retained for 90 days. Pageviews and
+all associated data will be permanently removed after this period.
 
 ## Data sub-processors
 
 A list of sub-processors and third-party service providers is maintained below.
 
 - [GitHub](https://github.com/) - Our website is served as a GitHub Page. For more
-  information about GitHub's practices,
-  see [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
-- [Sentry](https://sentry.io/) - Sentry is used for error reporting. For more information
-  about Sentry's practices, see their [Privacy Statement](https://sentry.io/privacy/).
+  information about GitHub's practices, see
+  [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
+- [Sentry](https://sentry.io/) - Used for error reporting. For more information about 
+  Sentry's practices, see their [Privacy Statement](https://sentry.io/privacy/).
+- [GoatCounter](https://www.goatcounter.com/) - GoatCounter is used for the analytics of
+  the main website. For more information, see their [Privacy Policy](https://www.goatcounter.com/help/privacy).
 
 ## Privacy policies of other websites
 
