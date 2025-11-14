@@ -53,7 +53,7 @@ EU. For more information, see [Sentry's Data Storage Location](https://docs.sent
 Since we try to anonymize reported data as much as possible, there is no reliable way to
 find your data.
 
-Error events will be automatically deleted after 90 days. For more information, see 
+Error events will be automatically deleted after 90 days. For more information, see
 [Sentry's Data Retention Periods](https://docs.sentry.io/security-legal-pii/security/data-retention-periods/).
 
 Analytics information is stored as separate “aggregate” tables per day or hour, with no
@@ -67,7 +67,7 @@ A list of sub-processors and third-party service providers is maintained below.
 - [GitHub](https://github.com/) - Our website is served as a GitHub Page. For more
   information about GitHub's practices, see
   [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
-- [Sentry](https://sentry.io/) - Used for error reporting. For more information about 
+- [Sentry](https://sentry.io/) - Used for error reporting. For more information about
   Sentry's practices, see their [Privacy Statement](https://sentry.io/privacy/).
 - [GoatCounter](https://www.goatcounter.com/) - GoatCounter is used for the analytics of
   the main website. For more information, see their [Privacy Policy](https://www.goatcounter.com/help/privacy).
