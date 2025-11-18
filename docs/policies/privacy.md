@@ -15,8 +15,8 @@ stored in this way:
 - Languages (e.g. English, Klingon).
 - Screen size (e.g. 768, 1920).
 
-We may also send anonymous error reports when you use the application (desktop or web).
-Typically, an error report may contain the following:
+We may also send anonymous error reports when you use the application. Typically, an error
+report may contain the following:
 
 - The error message that occurred.
 - Information about the use of the app immediately before the incident and when the app
