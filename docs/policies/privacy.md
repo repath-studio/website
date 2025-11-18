@@ -5,10 +5,9 @@ you visit our website, or when use our application.
 
 ## What data do we collect?
 
-We track visits on our main website (repath.studio) using
-[GoatCounter](https://www.goatcounter.com/), a privacy-aware web analytics platform that
-doesn’t track users with unique identifiers. The following information is stored in
-this way:
+We track visits on our main website (repath.studio) using a privacy-aware web analytics
+platform that doesn’t track users with unique identifiers. The following information is
+stored in this way:
 
 - Browsers, based on headers sent by the browser (e.g. Firefox 139, Chrome 102)
 - Systems, based on headers sent by the browser (e.g. Windows 11, macOS 15.2).
