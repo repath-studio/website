@@ -66,8 +66,8 @@ A list of sub-processors and third-party service providers is maintained below.
   [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement).
 - [Sentry](https://sentry.io/) - Used for error reporting. For more information about
   Sentry's practices, see their [Privacy Statement](https://sentry.io/privacy/).
-- [GoatCounter](https://www.goatcounter.com/) - GoatCounter is used for the analytics of
-  the main website. For more information, see their [Privacy Policy](https://www.goatcounter.com/help/privacy).
+- [GoatCounter](https://www.goatcounter.com/) - Used for the analytics of this website.
+  For more information, see their [Privacy Policy](https://www.goatcounter.com/help/privacy).
 
 ## Privacy policies of other websites
 
