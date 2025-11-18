@@ -37,14 +37,14 @@ disable error reports. We also offer the ability to change this option at any ti
 
 ## How will we use your data?
 
-Error reports are used for the sole purpose of identifying and fixing potential issues.
-We will not share, sell, rent, disclose, trade, publish or in any other way make data
-available to a third party unless it is required in order to deliver the service, or
-unless it is required by law or in order to fulfil a legal obligation.
+Error reports and web visits are used for the sole purpose of identifying and fixing
+potential issues. We will not share, sell, rent, disclose, trade, publish or in any other
+way make data available to a third party unless it is required in order to deliver the
+service, or unless it is required by law or in order to fulfil a legal obligation.
 
 ## How do we store your data?
 
-We do not store any data directly. GoatCounter's analytics Data is stored on servers at
+We do not store any data directly. GoatCounter's analytics data is stored on servers at
 Hetzner Online GmbH in Finland and Germany. Sentry's error reports are also stored in the
 EU. For more information, see [Sentry's Data Storage Location](https://docs.sentry.io/organization/data-storage-location/).
 
@@ -53,12 +53,9 @@ EU. For more information, see [Sentry's Data Storage Location](https://docs.sent
 Since we try to anonymize reported data as much as possible, there is no reliable way to
 find your data.
 
-Error events will be automatically deleted after 90 days. For more information, see
+Pageviews and all associated data will be permanently removed after 90 days. Error events
+will also be automatically deleted after 90 days. For more information, see
 [Sentry's Data Retention Periods](https://docs.sentry.io/security-legal-pii/security/data-retention-periods/).
-
-Analytics information is stored as separate “aggregate” tables per day or hour, with no
-way to link data between them. Web visits are also retained for 90 days. Pageviews and
-all associated data will be permanently removed after this period.
 
 ## Data sub-processors
 
