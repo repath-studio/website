@@ -1384,7 +1384,9 @@ with some minor additions.</p>
 </code></pre></div>
 <h2 id="re-frame-recommendations">Re-frame recommendations<a class="headerlink" href="#re-frame-recommendations" title="Permanent link">¶</a></h2>
 <p>Avoid chaining events to create new ones. Always prefer composing pure functions
-that directly transform the db. That is the whole purpose of <code>handlers</code> namespace.</p>
+that directly transform the db. That is the whole purpose of <code>handlers</code>
+namespace. Most functions under <code>handlers</code> take the db as their first argument,
+so they can be easily composed using the thread-first macro <code>-&gt;</code>.</p>
 <p>Use interceptors sparingly. Although they look (and probably are) ingenious, it
 is hard to write and reason with them. Doing things explicitly, is usually
 easier to grasp and maintain.</p>
