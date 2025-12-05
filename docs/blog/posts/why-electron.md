@@ -7,6 +7,9 @@ categories:
   - Devlog
 authors: 
   - Konstantinos
+links:
+  - Electron: https://www.electronjs.org/
+  - Tauri: http://v2.tauri.app/
 ---
 
 # Why Electron?
@@ -18,6 +21,8 @@ There's been significant criticism about the size and the memory footprint of
 is so much hate going towards this platform, that I feel the need to defend it, since I
 find it quite useful. I am not saying it’s the perfect solution for everything. Those are
 legitimate concerns, but as usual, it's all about trade-offs.
+
+<!-- more -->
 
 The first thing we need to answer though is not about Electron. It’s about web-based
 applications in general.
