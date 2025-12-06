@@ -76,7 +76,7 @@ dramatically reduces the size of the binary, by using the native webview of the 
 The problem with that, is that we also lose one of the biggest advantages of Electron,
 which bundles a Chromium based webview. The amount of confidence that we get from that is
 invaluable in my opinion. The alternative, is to make sure that our app works as intended
-on every major browser. This adds significant burden, especially if you are using modern
+on all target webviews. This adds significant burden, especially if you are using modern
 APIs that might not be currently supported.
 
 Rust could be a plus for certain developers, but if you don’t have any prior experience,
