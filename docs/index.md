@@ -58,7 +58,7 @@ hide:
 </div>
 
 <section>
-    <h2 style="text-align: center; margin-bottom: 50px;">Supported by NLnet</h2>
+    <h2 style="text-align: center;">Supported by NLnet</h2>
     <div style="text-align: center; max-width: 1000px; margin: 0 auto 50px;">
         This project is currently funded through NGI0 Commons Fund, a fund established by
         NLnet with financial support from the European Commission's Next Generation
