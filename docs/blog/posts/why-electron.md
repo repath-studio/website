@@ -57,9 +57,9 @@ try to implement quirky conversions.
 
 Because we want to provide a standalone offline application. Electron’s ecosystem also has
 the necessary tooling to help you package the application for the operating systems of
-your choice. That’s a big deal, if you don’t want to spend the a substantial amount of
-your time packaging the app for all major linux package managers. Unfortunately, solutions
-like Flatpak and Snap couldn’t fix this problem. They made the list longer.
+your choice. That’s a big deal, if you don’t want to spend a substantial amount of time
+packaging the app for all major linux package managers. Unfortunately, solutions like
+Flatpak and Snap couldn’t fix this problem. They made the list longer.
 
 ## Can’t we just serve a progressive web-app?
 
