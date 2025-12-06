@@ -10,9 +10,9 @@ authors:
 
 # A quick UI progress recap
 
-How it started...
-
 ![2](/assets/images/2.png)
+
+How it started...
 
 <!-- more -->
 
