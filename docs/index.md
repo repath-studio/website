@@ -59,13 +59,12 @@ hide:
 
 <section>
     <h2 style="text-align: center;">Supported by NLnet</h2>
-    <div style="text-align: center; max-width: 1000px; margin: 0 auto 50px;">
+    <div style="text-align: center; max-width: 1000px; margin: 50px auto;">
         This project is currently funded through NGI0 Commons Fund, a fund established by
         NLnet with financial support from the European Commission's Next Generation
         Internet program.
     </div>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;
-                margin-bottom: 100px;">
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;">
         <a href="https://nlnet.nl">
           <img
            src="./assets/images/nlnet.svg"
