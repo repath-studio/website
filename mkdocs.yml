@@ -43,12 +43,12 @@ nav:
   - Roadmap:
     - Milestones: roadmap/milestones.md
     - roadmap/changelog.md
-  - Blog:
-    - blog/index.md
   - Policies:
     - Privacy: policies/privacy.md
     - Security: policies/security.md
     - License: policies/license.md
+  - Blog:
+    - blog/index.md
 
 extra:
   generator: false
