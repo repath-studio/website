@@ -1,4 +1,6 @@
 ---
+comments: true
+description: A few words about our decision to use ElectronJS
 date: 2025-12-05
 tags:
   - Devlog
