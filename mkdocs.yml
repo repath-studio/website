@@ -56,14 +56,18 @@ extra:
   - icon: fontawesome/solid/at
     link: mailto:contact@repath.studio
     name: Email us
-  - icon: custom/matrix 
-    link: https://matrix.to/#/#repath.studio:matrix.org
+  - icon: fontawesome/brands/product-hunt
+    link: https://www.producthunt.com/products/repath-studio
+    name: Find us on Product Hunt
   - icon: fontawesome/brands/discord
     link: https://discord.gg/yzjY6W6ame
+    name: Join our Discord
   - icon: fontawesome/brands/instagram
     link: https://www.instagram.com/repath.studio/
+    name: Follow us on Instagram
   - icon: fontawesome/brands/github
-    link: https://github.com/repath-studio/
+    link: https://github.com/repath-studio/repath-studio
+    name: Star us on GitHub
 
 markdown_extensions:
   - admonition
@@ -77,9 +81,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      options:
-        custom_icons:
-          - overrides/.icons
 
 plugins:
   - search
