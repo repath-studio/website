@@ -65,6 +65,7 @@ body {
 
 .heart {
     animation: heart 1000ms infinite;
+    color: var(--md-primary-fg-color);
 }
 
 .support-link {
