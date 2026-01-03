@@ -166,27 +166,32 @@ body {
     padding: 1rem;
   }
 
-  .showcase-link {
+.showcase-link {
     display: inline-block;
     margin: 10px;
-  }
+}
 
-  .showcase-link img {
+.showcase-link img {
     width: 120px;
     transition: all .3s;
     box-shadow: 0 5px 15px rgba(0,0,0, 0.3);
-  }
+}
 
-  .showcase-link img:hover {
+.showcase-link img:hover {
     box-shadow: 0 5px 25px rgba(0,0,0, 0.7);
-  }
+}
 
-  @media screen and (min-width: 60em) {
+.md-banner a {
+    color: inherit !important;
+    text-decoration: underline;
+} 
+
+@media screen and (min-width: 60em) {
     .showcase {
-      padding: 2rem;
+        padding: 2rem;
     }
 
     .showcase-link img {
-      width: 200px;
+        width: 200px;
     }
-  }
+}
