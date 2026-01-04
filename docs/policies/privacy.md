@@ -67,8 +67,6 @@ A list of sub-processors and third-party service providers is maintained below.
   Sentry's practices, see their [Privacy Statement](https://sentry.io/privacy/).
 - [GoatCounter](https://www.goatcounter.com/) - Used for the analytics of this website.
   For more information, see their [Privacy Policy](https://www.goatcounter.com/help/privacy).
-- [Sellfy](https://sellfy.com/) - Used by our online store. Please review their full
-  [Privacy Policy](https://sellfy.com/privacy/).
 
 ## Privacy policies of other websites
 
