@@ -96,4 +96,4 @@ plugins:
   - social:
       cards_layout_options:
         font_family: Sora
-        background_color: pink
+        background_color: "#97124c"
