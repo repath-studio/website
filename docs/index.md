@@ -60,7 +60,7 @@ hide:
 <section>
     <h2 style="text-align: center;">Supported by NLnet</h2>
     <div style="text-align: center; max-width: 1000px; margin: 50px auto;">
-        This project is currently funded through
+        This project was funded through
         <a href="https://nlnet.nl/commonsfund">NGI0 Commons Fund</a>, a fund established
         by <a href="https://nlnet.nl/">NLnet</a> with financial support from the European
         Commission's <a href="https://ngi.eu/">Next Generation Internet</a> programme.
