@@ -14,7 +14,7 @@ links:
   - NLnet Project Page: https://nlnet.nl/project/RepathStudio/
 ---
 
-# NLnet Quarterly Update
+# First NLnet Quarterly Update
 
 ![Electron](/assets/images/nlnet-banner.png)
 
