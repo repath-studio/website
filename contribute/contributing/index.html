@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -1577,7 +1577,7 @@ h, m, s, ms -&gt; hours, minutes, seconds, milliseconds
 modules, following <a href="https://day8.github.io/re-frame/App-Structure/">re-frame's app structure suggestions</a>
 with some minor additions.</p>
 <div class="highlight"><pre><span></span><code>module\
-├── core.cljs      -&gt; entry point
+├── core.cljs      -&gt; entry point (will be evaluated on load)
 ├── db.cljs        -&gt; schema, validation
 ├── views.cljs     -&gt; reagent views
 ├── events.cljs    -&gt; event handlers
