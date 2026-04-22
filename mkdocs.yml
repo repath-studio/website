@@ -26,8 +26,24 @@ theme:
     repo: fontawesome/brands/github
   logo: assets/images/logo.svg
   palette:
-    primary: pink-700
-    accent: pink
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
   font: false
 
 nav:
@@ -84,7 +100,7 @@ markdown_extensions:
 
 plugins:
   - search
-  - glightbox
+  # - glightbox
   - blog
   - git-revision-date-localized:
       exclude:

@@ -68,7 +68,11 @@ hide:
     <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;">
         <a href="https://nlnet.nl">
           <img
-           src="./assets/images/nlnet.svg"
+           src="./assets/images/nlnet-light.svg#only-light"
+           alt="Logo NLnet: abstract logo of four people seen from above"
+           width="200px">
+        <img
+           src="./assets/images/nlnet-dark.svg#only-dark"
            alt="Logo NLnet: abstract logo of four people seen from above"
            width="200px">
         </a>
