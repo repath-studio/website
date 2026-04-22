@@ -16,7 +16,8 @@ links:
 
 # First NLnet Quarterly Update
 
-![Electron](/assets/images/nlnet-banner.png)
+![Electron](/assets/images/nlnet-banner-light.svg#only-light)
+![Electron](/assets/images/nlnet-banner-dark.svg#only-dark)
 
 Since June 2025, this project is funded through [NGI0 Commons Fund](https://nlnet.nl/commonsfund),
 a fund established by [NLnet](https://nlnet.nl) with financial support from the European

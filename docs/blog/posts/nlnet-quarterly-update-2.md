@@ -16,7 +16,8 @@ links:
 
 # Second NLnet Quarterly Update
 
-![Electron](/assets/images/nlnet-banner.png)
+![Electron](/assets/images/nlnet-banner-light.svg#only-light)
+![Electron](/assets/images/nlnet-banner-dark.svg#only-dark)
 
 Another NLnet update, a little late because of the holiday season. Although not originally
 planned, this quarter was mainly about mobile support. Now that the app works as expected
