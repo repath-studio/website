@@ -27,12 +27,14 @@ theme:
   logo: assets/images/logo.svg
   palette:
     - media: "(prefers-color-scheme)"
+      primary: pink-700
+      accent: pink
       toggle:
         icon: material/brightness-auto
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: custom
+      primary: pink-700
       accent: pink
       toggle:
         icon: material/brightness-7
