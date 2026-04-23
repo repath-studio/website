@@ -94,7 +94,7 @@ markdown_extensions:
 
 plugins:
   - search
-  # - glightbox
+  - glightbox
   - blog
   - git-revision-date-localized:
       exclude:
