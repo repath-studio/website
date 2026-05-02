@@ -4,10 +4,8 @@ description: Our first quarterly update about the NLnet funding
 date: 2025-09-12
 tags:
   - NLnet
-  - Devlog
 categories:
   - NLnet Funding
-  - Devlog
 authors: 
   - Konstantinos
 links:

@@ -57,8 +57,8 @@ nav:
     - Privacy: policies/privacy.md
     - Security: policies/security.md
     - License: policies/license.md
-  - Blog:
-    - blog/index.md
+  - News:
+    - news/index.md
 
 extra:
   generator: false
@@ -95,11 +95,12 @@ markdown_extensions:
 plugins:
   - search
   - glightbox
-  - blog
+  - blog:
+      blog_dir: news
   - git-revision-date-localized:
       exclude:
         - get-started/*
-        - blog/*
+        - news/*
         - contribute/*
         - roadmap/*
         - index.md

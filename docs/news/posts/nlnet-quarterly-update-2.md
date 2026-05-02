@@ -4,10 +4,8 @@ description: Our second quarterly update about the NLnet funding
 date: 2026-01-09
 tags:
   - NLnet
-  - Devlog
 categories:
   - NLnet Funding
-  - Devlog
 authors: 
   - Konstantinos
 links:
