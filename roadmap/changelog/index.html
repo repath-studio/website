@@ -894,6 +894,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#0415-2026-06-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.4.15 (2026-06-02)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#0414-2025-05-02" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1769,6 +1780,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#0415-2026-06-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.4.15 (2026-06-02)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#0414-2025-05-02" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2143,6 +2165,38 @@
 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h1>
 <p>All notable user facing changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>.</p>
+<h2 id="0415-2026-06-02">0.4.15 (2026-06-02)<a class="headerlink" href="#0415-2026-06-02" title="Permanent link">¶</a></h2>
+<p><strong>Added</strong></p>
+<ul>
+<li>Introduce a tool that can be used to create paths and implement editing <a href="https://github.com/repath-studio/repath-studio/pull/137">#137</a></li>
+<li>Path editing enhancements <a href="https://github.com/repath-studio/repath-studio/pull/141">#141</a></li>
+<li>Points and path editing enhancements <a href="https://github.com/repath-studio/repath-studio/pull/144">#144</a></li>
+<li>Angle snapping <a href="https://github.com/repath-studio/repath-studio/pull/138">#138</a></li>
+<li>Negative and zero scale ratio support</li>
+<li>Cursor on ruler hover to indicate the guide tool</li>
+</ul>
+<p><strong>Removed</strong></p>
+<ul>
+<li>Default transform pan tool shortcuts</li>
+<li>Waiting state from d and points attribute</li>
+</ul>
+<p><strong>Changed</strong></p>
+<ul>
+<li>Display loading indicator sooner</li>
+<li>Use default handle size for stroke width of ghost elements</li>
+<li>Move selected bbox to bottom</li>
+<li>Always round path segments to default precision</li>
+</ul>
+<p><strong>Fixed</strong></p>
+<ul>
+<li>Guide tool cancel</li>
+<li>Prevent dropping a parent on its children</li>
+<li>Drag start event at the edge of edit handles</li>
+<li>Sentry initialization</li>
+<li>Text element offset on scale</li>
+<li>Pivot point on recursive scale</li>
+<li>Title-bar visibility regression</li>
+</ul>
 <h2 id="0414-2025-05-02">0.4.14 (2025-05-02)<a class="headerlink" href="#0414-2025-05-02" title="Permanent link">¶</a></h2>
 <p><strong>Added</strong></p>
 <ul>
