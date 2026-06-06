@@ -194,6 +194,9 @@ body {
 .showcase-link img:hover {
     box-shadow: 0 5px 25px rgba(0,0,0, 0.7);
 }
+.md-banner {
+    background-color: #1e2129;
+}
 
 .md-banner a {
     color: inherit !important;
