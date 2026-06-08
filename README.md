@@ -4,11 +4,26 @@
 
 ## Install
 
+Setup a new virtual environment
+```
+python -m venv .venv
+```
+
+Activate the environment
+```
+python -m venv .venv
+```
+
 Install MkDocs Material
 ```
 npm run install-python-deps
 ```
-https://squidfunk.github.io/mkdocs-material/getting-started/
+
+
+Clone the required docs
+```
+npm run sync-docs
+```
 
 ## How to Run
 ```
