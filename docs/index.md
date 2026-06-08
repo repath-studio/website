@@ -65,7 +65,7 @@ hide:
         by <a href="https://nlnet.nl/">NLnet</a> with financial support from the European
         Commission's <a href="https://ngi.eu/">Next Generation Internet</a> programme.
     </div>
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 50px;">
+    <div style="display: flex; justify-content: center; gap: 50px; padding: 0 2rem;">
         <a href="https://nlnet.nl">
           <img
            src="./assets/images/nlnet-light.svg#only-light"
