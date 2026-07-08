@@ -1605,16 +1605,17 @@ h, m, s, ms -&gt; hours, minutes, seconds, milliseconds
 modules, following <a href="https://day8.github.io/re-frame/App-Structure/">re-frame's app structure suggestions</a>
 with some minor additions.</p>
 <div class="highlight"><pre><span></span><code>module\
-├── core.cljs      -&gt; entry point (will be evaluated on load)
-├── db.cljs        -&gt; schema, validation
-├── views.cljs     -&gt; reagent views
-├── events.cljs    -&gt; event handlers
-├── subs.cljs      -&gt; subscription handlers
-├── handlers.cljs  -&gt; helper functions for db transformations
-├── effects.cljs   -&gt; effect handlers
-├── hierarchy.cljs -&gt; multimethods and hierarchies
-├── styles.css     -&gt; styles
-└── README.md      -&gt; documentation
+├── core.cljs       -&gt; entry point (will be evaluated on load)
+├── db.cljs         -&gt; schema, validation
+├── views.cljs      -&gt; reagent views
+├── events.cljs     -&gt; event handlers
+├── subs.cljs       -&gt; subscription handlers
+├── handlers.cljs   -&gt; helper functions for db transformations
+├── effects.cljs    -&gt; effect handlers
+├── hierarchy.cljs  -&gt; multimethods and hierarchies
+├── migrations.cljs -&gt; data migrations
+├── styles.css      -&gt; styles
+└── README.md       -&gt; documentation
 </code></pre></div>
 <h2 id="re-frame-recommendations">Re-frame recommendations<a class="headerlink" href="#re-frame-recommendations" title="Permanent link">¶</a></h2>
 <p>Avoid chaining events to create new ones. Always prefer composing pure functions
@@ -1628,9 +1629,12 @@ easier to grasp and maintain.</p>
 effects. You can use <code>as-alias</code> to require those namespaces without evaluating
 the registrations multiple times.</p>
 <h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">¶</a></h2>
+<p>You can use the <a href="https://repath.studio/schema-explorer/">schema explorer</a> to
+examine the app schemas and their relationships.</p>
 <p>We use <a href="https://github.com/metosin/malli">malli</a> to describe the shape of our
 app db and selectively validate incoming data (e.g. file loading). We also use
-this spec to generate default values. Full db validation is enabled on dev mode.</p>
+this spec to generate default values. Full db validation can be enabled on dev
+mode.</p>
 <p><a href="https://github.com/metosin/malli/blob/master/docs/function-schemas.md#defn-schemas">Function schemas</a>
 are selectively applied to pure and critical namespaces, such as utils and
 handlers. By default, function schemas are instrumented only during tests to
