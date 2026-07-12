@@ -32,6 +32,5 @@ jobs:
 
       - run: npm install
       - run: node ./node_modules/roadmap-generator/index.js ./roadmap.conf.js ${{ secrets.PERSONAL_ACCESS_TOKEN }} -gs > ./docs/roadmap/milestones.md
-      - run: npm run sync-docs
       - run: npm run install-python-deps
       - run: npm run deploy
