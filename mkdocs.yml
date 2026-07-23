@@ -57,6 +57,7 @@ nav:
     - Privacy: policies/privacy.md
     - Security: policies/security.md
     - License: policies/license.md
+    - LLMs: policies/llm.md
   - News:
     - news/index.md
 
