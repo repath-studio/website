@@ -736,13 +736,96 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="App structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Db ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Events db
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subs-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subs db
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlers-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handlers ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effects-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effects ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchy-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchy ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#re-frame-recommendations" class="md-nav__link">
+  <a href="#general-re-frame-recommendations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Re-frame recommendations
+        General re-frame recommendations
       
     </span>
   </a>
@@ -1532,13 +1615,96 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="App structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#db-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Db ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#events-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Events db
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subs-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subs db
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#handlers-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Handlers ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effects-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Effects ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchy-ns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchy ns
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#re-frame-recommendations" class="md-nav__link">
+  <a href="#general-re-frame-recommendations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Re-frame recommendations
+        General re-frame recommendations
       
     </span>
   </a>
@@ -1634,7 +1800,7 @@ h, m, s, ms -&gt; hours, minutes, seconds, milliseconds
 
 <p>We are trying to split our code under renderer into relatively independent
 modules, following <a href="https://day8.github.io/re-frame/App-Structure/">re-frame's app structure suggestions</a>
-with some minor additions.</p>
+with some additions.</p>
 <div class="highlight"><pre><span></span><code>module\
 ├── core.cljs       -&gt; entry point (will be evaluated on load)
 ├── db.cljs         -&gt; schema, validation
@@ -1647,11 +1813,38 @@ with some minor additions.</p>
 ├── migrations.cljs -&gt; data migrations
 └── README.md       -&gt; documentation
 </code></pre></div>
-<h2 id="re-frame-recommendations">Re-frame recommendations<a class="headerlink" href="#re-frame-recommendations" title="Permanent link">¶</a></h2>
-<p>Avoid chaining events to create new ones. Always prefer composing pure functions
-that directly transform the db. That is the whole purpose of <code>handlers</code>
-namespace. Most functions under <code>handlers</code> take the db as their first argument,
-so they can be easily composed using the thread-first macro <code>-&gt;</code>.</p>
+<h3 id="core-ns">Core ns<a class="headerlink" href="#core-ns" title="Permanent link">¶</a></h3>
+<p>Core requires the rest of the namaspaces (subs, events, etc). We also register
+the corresponding actions and action groups.</p>
+<h3 id="db-ns">Db ns<a class="headerlink" href="#db-ns" title="Permanent link">¶</a></h3>
+<p>Db defines the <a href="https://github.com/metosin/malli">malli</a> schemas of the module,
+and the corresponding <a href="https://github.com/metosin/malli#validation">validators</a>,
+<a href="https://github.com/metosin/malli#humanized-error-messages">explainers</a>, and
+<a href="https://github.com/metosin/malli#value-transformation">transformers</a>.</p>
+<h3 id="events-db">Events db<a class="headerlink" href="#events-db" title="Permanent link">¶</a></h3>
+<p>Registers our re-frame events. Most events use functions from handlers to
+transform our db.</p>
+<h3 id="subs-db">Subs db<a class="headerlink" href="#subs-db" title="Permanent link">¶</a></h3>
+<p>Registers our re-frame subscriptions. This ns is usually very thin.</p>
+<h3 id="handlers-ns">Handlers ns<a class="headerlink" href="#handlers-ns" title="Permanent link">¶</a></h3>
+<p>Handlers contain pure functions that directly transform the db, or return a
+value based on the db. Most functions under <code>handlers</code> take the db as their
+first argument, so they can be easily composed using the thread-first macro <code>-&gt;</code>.
+Functions without input args usually return a <a href="https://clojure.org/reference/transducers">transducer</a>.
+If none of the above is true, the function probably belongs to a different
+namespace.</p>
+<h3 id="effects-ns">Effects ns<a class="headerlink" href="#effects-ns" title="Permanent link">¶</a></h3>
+<p>Registers all re-frame effects. Although we could use the events ns for this, we
+prefer isung dedicated ns to isolate all side effects and make stabing easier on
+tests.</p>
+<h3 id="hierarchy-ns">Hierarchy ns<a class="headerlink" href="#hierarchy-ns" title="Permanent link">¶</a></h3>
+<p>Hierarchy defines the required multimethods in order to allow extending the app
+on the fly, based on a dispatch value. In a way, it is our plugin interface.
+When the hierarchy ns is available for a module, the <code>impl</code> directory contains
+the build-in <code>defmethod</code> implementations for the multimethods.</p>
+<h2 id="general-re-frame-recommendations">General re-frame recommendations<a class="headerlink" href="#general-re-frame-recommendations" title="Permanent link">¶</a></h2>
+<p>Avoid chaining events to create new ones. Always prefer composing transformation
+functions. That is the whole purpose of <code>handlers</code> namespace.</p>
 <p>Use interceptors sparingly. Although they look (and probably are) ingenious, it
 is hard to write and reason with them. Doing things explicitly, is usually
 easier to grasp and maintain.</p>
