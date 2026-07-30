@@ -1829,6 +1829,15 @@ easier to grasp and maintain.</p>
 <p>Always use auto-qualified keywords (e.g. <code>::copy</code>) for subscriptions, events and
 effects. You can use <code>as-alias</code> to require those namespaces without evaluating
 the registrations multiple times.</p>
+<p>When you are not sure if you should add new state to the app db, the answer is
+usually yes, if the state is going to be used outside of the context of a single
+component view. If it also needs to be persisted to local storage, it should be
+serializable to json.</p>
+<p>If you need to reuse the result of a subscription within an event, add reusable
+functions to handlers, and use them in subs and events. If it's an expensive
+calculation, you can write the result to the db within the event handler, or in
+an interceptor. Using the recently introduced <a href="https://day8.github.io/re-frame/Flows/">flows</a>
+is also an option, but we haven't tested that feature yet.</p>
 <h2 id="spec">Spec<a class="headerlink" href="#spec" title="Permanent link">¶</a></h2>
 <p>You can use the <a href="https://repath.studio/schema-explorer/">schema explorer</a> to
 examine the app schemas and their relationships.</p>
