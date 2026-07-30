@@ -8,7 +8,7 @@ module.exports = {
   milestonesStartDate: '2020-01-01T00:00:00Z', // ISO formatted timestamp
 
   // Include open and closed milestones where due date is before milestonesEndDate
-  milestonesEndDate: '2026-11-01T00:00:00Z', // ISO formatted timestamp
+  milestonesEndDate: '2027-11-01T00:00:00Z', // ISO formatted timestamp
 
   // Github repository to open a Pull Request with the generated roadmap
   targetRepo: "repath-studio/repath-studio",
