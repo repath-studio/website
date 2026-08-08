@@ -30,6 +30,13 @@ jobs:
         with:
           python-version: 3.x
 
+      - name: Checkout main project repository
+        uses: actions/checkout@v5
+        with:
+          repository: repath-studio/repath-studio
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          path: repath-studio
+
       - run: npm install
       - run: node ./node_modules/roadmap-generator/index.js ./roadmap.conf.js ${{ secrets.PERSONAL_ACCESS_TOKEN }} -gs > ./docs/roadmap/milestones.md
       - run: npm run install-python-deps
