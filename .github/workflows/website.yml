@@ -38,6 +38,7 @@ jobs:
           path: repath-studio
 
       - run: npm install
+      - run: npm run sync-docs
       - run: node ./node_modules/roadmap-generator/index.js ./roadmap.conf.js ${{ secrets.PERSONAL_ACCESS_TOKEN }} -gs > ./docs/roadmap/milestones.md
       - run: npm run install-python-deps
       - run: npm run deploy
