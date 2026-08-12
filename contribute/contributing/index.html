@@ -604,6 +604,8 @@
       
         
       
+        
+      
     
     
     
@@ -844,6 +846,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#upgrading-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrading dependencies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrading dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npm-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NPM packages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clojure-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clojure packages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#useful-development-shortcuts" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -878,6 +919,34 @@
     
   
     Code of Conduct
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LLM_POLICY/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LLMs
   
 
     
@@ -1062,8 +1131,6 @@
       
         
       
-        
-      
     
     
     
@@ -1180,34 +1247,6 @@
     
   
     License
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../policies/llm/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    LLMs
   
 
     
@@ -1712,6 +1751,45 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#upgrading-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Upgrading dependencies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Upgrading dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#npm-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NPM packages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clojure-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Clojure packages
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#useful-development-shortcuts" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1746,7 +1824,7 @@
 <p>Thank you for your interest in participating in the project's development!
 Please read the <a href="../CODE_OF_CONDUCT/">Contributor Covenant Code of Conduct</a>
 and the <a href="../CLA/">Contributor License Agreement</a> first. If you plan to use LLMs
-to contribute, make sure you also read our AI and LLM policy.</p>
+to contribute, make sure you also read our <a href="../LLM_POLICY/">AI and LLM policy</a>.</p>
 <p>The project is written in <a href="https://clojurescript.org/">ClojureScript</a> - a
 compiler for <a href="https://clojure.org/">Clojure</a> that targets JavaScript, and is
 based on <a href="https://github.com/day8/re-frame/">re-frame</a> - a framework for
@@ -1780,6 +1858,7 @@ h, m, s, ms -&gt; hours, minutes, seconds, milliseconds
 modules, following <a href="https://day8.github.io/re-frame/App-Structure/">re-frame's app structure suggestions</a>
 with some additions.</p>
 <div class="highlight"><pre><span></span><code>module\
+├── impl\           -&gt; built-in multimethod implementations
 ├── core.cljs       -&gt; entry point (will be evaluated on load)
 ├── db.cljs         -&gt; schema, validation
 ├── views.cljs      -&gt; reagent views
@@ -1787,7 +1866,7 @@ with some additions.</p>
 ├── subs.cljs       -&gt; subscription handlers
 ├── handlers.cljs   -&gt; helper functions for db transformations
 ├── effects.cljs    -&gt; effect handlers
-├── hierarchy.cljs  -&gt; multimethods and hierarchies
+├── hierarchy.cljs  -&gt; multimethod and hierarchy definitions
 ├── migrations.cljs -&gt; data migrations
 └── README.md       -&gt; documentation
 </code></pre></div>
@@ -1822,7 +1901,9 @@ When the hierarchy ns is available for a module, the <code>impl</code> directory
 the build-in <code>defmethod</code> implementations for the multimethods.</p>
 <h2 id="general-re-frame-recommendations">General re-frame recommendations<a class="headerlink" href="#general-re-frame-recommendations" title="Permanent link">¶</a></h2>
 <p>Avoid chaining events to create new ones. Always prefer composing transformation
-functions. That is the whole purpose of <code>handlers</code> namespace.</p>
+functions. That is the whole purpose of <code>handlers</code> namespace. Re-frame events
+should be treated as db transactions. All of the required operations should be
+handled within the event.</p>
 <p>Use interceptors sparingly. Although they look (and probably are) ingenious, it
 is hard to write and reason with them. Doing things explicitly, is usually
 easier to grasp and maintain.</p>
@@ -1850,6 +1931,29 @@ are selectively applied to pure and critical namespaces, such as utils and
 handlers. By default, function schemas are instrumented only during tests to
 avoid performance overhead. However, runtime instrumentation can also be enabled
 in the development environment (see <code>dev.cljs</code>).</p>
+<h2 id="upgrading-dependencies">Upgrading dependencies<a class="headerlink" href="#upgrading-dependencies" title="Permanent link">¶</a></h2>
+<h3 id="npm-packages">NPM packages<a class="headerlink" href="#npm-packages" title="Permanent link">¶</a></h3>
+<p>Running <code>npm run upgrade</code> automatically upgrades <code>package.json</code> dependencies to
+the latest versions. The script checks for new versions with 7 day minimum age
+to reduce the risk of installing compromised packages. If just want to look at
+the available upgrades without changing <code>package.json</code>, you can run
+<code>npm outdated</code>.</p>
+<p>After upgrading we need to check the release notes of the upgraded packages, to
+make sure there is no breaking change, and to look for introduced features or
+changes that can improve our application.</p>
+<p>If a package introduced a lot of breaking changes, and requires spacial
+handling, we can add it to the ignore list by passing
+<code>-x 'ignored-package-name'</code> to <code>npm-check-updates</code>. In this case, we need to
+also open a corresponding upgrade issue with its priority se to <code>high</code>, to keep
+track of those packages and handle the upgrade as soon as possible.</p>
+<p>When we are happy with the <code>package.json</code> changes, we need to manually run
+<code>npm install</code> to also update our <code>package-lock.json</code>, and handle any package
+resolution issues that may arise.</p>
+<p>Before pushing those changes, we need to test all related functionality to
+ensure that there are no regressions.</p>
+<h2 id="clojure-packages">Clojure packages<a class="headerlink" href="#clojure-packages" title="Permanent link">¶</a></h2>
+<p>We can check for outdated Clojure dependencies by running <code>clojure -M:outdated</code>.
+There is an automated action that runs this check once a week.</p>
 <h2 id="useful-development-shortcuts">Useful development shortcuts<a class="headerlink" href="#useful-development-shortcuts" title="Permanent link">¶</a></h2>
 <div class="highlight"><pre><span></span><code>Ctrl+Shift+I -&gt; Toggle devtools
 Ctrl+Shift+X -&gt; Toggle 10x
