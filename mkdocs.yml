@@ -49,6 +49,7 @@ nav:
   - Contribute:
     - Develop: contribute/contributing.md
     - Code of Conduct: contribute/CODE_OF_CONDUCT.md
+    - LLMs: contribute/LLM_POLICY.md
     - CLA: contribute/CLA.md
   - Roadmap:
     - Milestones: roadmap/milestones.md
@@ -57,7 +58,6 @@ nav:
     - Privacy: policies/privacy.md
     - Security: policies/security.md
     - License: policies/license.md
-    - LLMs: policies/llm.md
   - News:
     - news/index.md
 
