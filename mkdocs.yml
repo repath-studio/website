@@ -44,7 +44,6 @@ nav:
   - Home: index.md
   - Get Started:
     - get-started/download.md
-    - get-started/shortcuts.md
     - Interactive Shell: get-started/interactive-shell.md
   - Contribute:
     - Develop: contribute/contributing.md
