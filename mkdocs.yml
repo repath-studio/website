@@ -44,7 +44,8 @@ nav:
   - Home: index.md
   - Get Started:
     - get-started/download.md
-    - Interactive Shell: get-started/interactive-shell.md
+    - get-started/history-tree.md
+    - get-started/interactive-shell.md
   - Contribute:
     - Develop: contribute/contributing.md
     - Code of Conduct: contribute/CODE_OF_CONDUCT.md

@@ -1,6 +1,6 @@
-# Interactive Shell (REPL)
+# Interactive shell (REPL)
 
-Our embedded REPL at the bottom of the editor allows evaluating code to generate shapes, 
+Our embedded REPL at the bottom of the editor allows evaluating code to generate shapes,
 or even extend the editor on the fly.
 
 ## What is a REPL?
@@ -8,7 +8,6 @@ or even extend the editor on the fly.
 A REPL ([read–eval–print loop](https://en.wikipedia.org/wiki/Read%e2%80%93eval%e2%80%93print_loop)),
 also known as command shell, is an interactive computer programming environment that takes
 user inputs, executes them, and returns the result to the user.
-
 
 ## Examples
 
@@ -38,7 +37,7 @@ user namespace. Try to generate a cat image by running the following command.
 (kitty [0 0] 350 350)
 ```
 
-![download for MacOS](../assets/images/cat.png)
+![cat image](../assets/images/cat.png)
 
 Wonderful! Now let's try to create a cat collage by creating a 5x5 image grid.
 
@@ -49,6 +48,6 @@ Wonderful! Now let's try to create a cat collage by creating a 5x5 image grid.
 
 ```
 
-![download for MacOS](../assets/images/cat-collage.png)
+![cat collage](../assets/images/cat-collage.png)
 
 Perfection!
