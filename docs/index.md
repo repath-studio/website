@@ -28,7 +28,7 @@ hide:
     Evaluate Clojure, Python, and JavaScript code on the embedded
     REPL to generate shapes, or even extend the editor on the fly.
 
-    [Read more..](/get-started/interactive-shell)
+    [Read more](/get-started/interactive-shell)
 
 - :material-animation-play:{ .lg .middle } __SMIL animations__
 
@@ -57,7 +57,7 @@ hide:
 
     Distributed under the terms of the AGPL-3.0 license.
 
-    [Read more..](/policies/license)
+    [Read more](/policies/license)
 
 </div>
 
