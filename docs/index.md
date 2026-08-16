@@ -17,7 +17,7 @@ hide:
     Maintain all user actions and travel through time, without ever losing your undo/redo
     stack.
 
-    [Read more..](/get-started/history-tree)
+    [Read more](/get-started/history-tree)
 
 - :fontawesome-solid-terminal:{ .lg .middle } __Interactive shell__
 
