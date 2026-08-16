@@ -17,7 +17,7 @@ hide:
     Maintain all user actions and travel through time, without ever losing your undo/redo
     stack.
 
-    [Read more](/get-started/history-tree)
+    [Learn more](/get-started/history-tree)
 
 - :fontawesome-solid-terminal:{ .lg .middle } __Interactive shell__
 
@@ -28,7 +28,7 @@ hide:
     Evaluate Clojure, Python, and JavaScript code on the embedded
     REPL to generate shapes, or even extend the editor on the fly.
 
-    [Read more](/get-started/interactive-shell)
+    [Learn more](/get-started/interactive-shell)
 
 - :material-animation-play:{ .lg .middle } __SMIL animations__
 
@@ -57,7 +57,7 @@ hide:
 
     Distributed under the terms of the AGPL-3.0 license.
 
-    [Read more](/policies/license)
+    [Learn more](/policies/license)
 
 </div>
 
