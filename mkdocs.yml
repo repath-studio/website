@@ -44,6 +44,7 @@ nav:
   - Home: index.md
   - Get Started:
     - get-started/download.md
+    - Powered by SVG: get-started/powered-by-svg.md
     - get-started/history-tree.md
     - get-started/interactive-shell.md
   - Contribute:

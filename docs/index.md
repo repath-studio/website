@@ -42,8 +42,9 @@ hide:
 
     ---
 
-    Educational-driven exposing the specification and rendering on an
-    SVG canvas.
+    Educational-driven, relying and exposing the specification.
+
+    [Learn more](/get-started/powered-by-svg)
 
 - :material-human:{ .lg .middle } __Accessibility testing__
 
