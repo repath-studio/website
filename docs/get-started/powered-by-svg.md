@@ -6,8 +6,7 @@ The specification info is based on
 - [MDN data](https://github.com/mdn/data) - A repository that contains general data
   for Web technologies and is maintained by the MDN team at Mozilla.
 - [BCD](https://github.com/mdn/browser-compat-data) - The `browser-compat-data` ("BCD")
-  project that contains machine-readable browser compatibility data for Web technologies,
-  such as Web APIs, JavaScript features, CSS properties and more.
+  project that contains machine-readable browser compatibility data for Web technologies.
 
 Updates on those projects may affect the behavior of the application.
 
