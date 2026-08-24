@@ -44,10 +44,10 @@ nav:
   - Home: index.md
   - Get Started:
     - get-started/download.md
-    - Powered by SVG: get-started/powered-by-svg.md
     - get-started/history-tree.md
     - get-started/interactive-shell.md
     - get-started/smil-animations.md
+    - Powered by SVG: get-started/powered-by-svg.md
   - Contribute:
     - Develop: contribute/contributing.md
     - Code of Conduct: contribute/CODE_OF_CONDUCT.md
