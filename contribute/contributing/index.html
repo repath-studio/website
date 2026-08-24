@@ -12,7 +12,7 @@
         <link rel="canonical" href="https://repath.studio/contribute/contributing/">
       
       
-        <link rel="prev" href="../../get-started/interactive-shell/">
+        <link rel="prev" href="../../get-started/smil-animations/">
       
       
         <link rel="next" href="../CODE_OF_CONDUCT/">
@@ -453,6 +453,8 @@
       
         
       
+        
+      
     
     
     
@@ -597,6 +599,34 @@
     
   
     Interactive shell (REPL)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/smil-animations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SMIL Animations
   
 
     
@@ -1922,7 +1952,7 @@ If none of the above is true, the function probably belongs to a different
 namespace.</p>
 <h3 id="effects-ns">Effects ns<a class="headerlink" href="#effects-ns" title="Permanent link">¶</a></h3>
 <p>Registers all re-frame effects. Although we could use the events ns for this, we
-prefer isung dedicated ns to isolate all side effects and make stabing easier on
+prefer using dedicated ns to isolate all side effects and make stabbing easier on
 tests.</p>
 <h3 id="hierarchy-ns">Hierarchy ns<a class="headerlink" href="#hierarchy-ns" title="Permanent link">¶</a></h3>
 <p>Hierarchy defines the required multimethods in order to allow extending the app
@@ -1971,10 +2001,10 @@ the available upgrades without changing <code>package.json</code>, you can run
 <p>After upgrading we need to check the release notes of the upgraded packages, to
 make sure there is no breaking change, and to look for introduced features or
 changes that can improve our application.</p>
-<p>If a package introduced a lot of breaking changes, and requires spacial
+<p>If a package introduced a lot of breaking changes, and requires special
 handling, we can add it to the ignore list by passing
 <code>-x 'ignored-package-name'</code> to <code>npm-check-updates</code>. In this case, we need to
-also open a corresponding upgrade issue with its priority se to <code>high</code>, to keep
+also open a corresponding upgrade issue with its priority set to <code>high</code>, to keep
 track of those packages and handle the upgrade as soon as possible.</p>
 <p>When we are happy with the <code>package.json</code> changes, we need to manually run
 <code>npm install</code> to also update our <code>package-lock.json</code>, and handle any package
@@ -2057,7 +2087,7 @@ Ctrl+R       -&gt; Reload app
           <!-- Link to previous page -->
           
             
-            <a href="../../get-started/interactive-shell/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Interactive shell (REPL)">
+            <a href="../../get-started/smil-animations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: SMIL Animations">
               <div class="md-footer__button md-icon">
                 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2067,7 +2097,7 @@ Ctrl+R       -&gt; Reload app
                   Previous
                 </span>
                 <div class="md-ellipsis">
-                  Interactive shell (REPL)
+                  SMIL Animations
                 </div>
               </div>
             </a>
