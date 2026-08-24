@@ -36,7 +36,9 @@ hide:
 
     ![Animations](./assets/images/animations.png){ width="100%" }
 
-    Create and edit SMIL animations, an extension of SVG allowing to animating SVG elements.
+    Create and edit SMIL animations, an extension of SVG that allows you to animate SVG elements.
+
+    [Learn more](/get-started/smil-animations)
 
 - :simple-svg:{ .lg .middle } __Powered by SVG__
 
