@@ -48,8 +48,13 @@ jobs:
         run: npm ci
         working-directory: repath-studio
 
-      - run: npm install
-      - run: npm run sync-docs
-      - run: node ./node_modules/roadmap-generator/index.js ./roadmap.conf.js ${{ secrets.PERSONAL_ACCESS_TOKEN }} -gs > ./docs/roadmap/milestones.md
+      - name: Generate roadmap
+        run: |
+          npm install
+          npm run generate-roadmap
+        env:
+          ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+          - run: npm run sync-docs
       - run: npm run install-python-deps
       - run: npm run deploy

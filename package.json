@@ -9,9 +9,16 @@
     "install-python-deps": "pip install mkdocs-material==\"9.7.7\" \"mkdocs-material[imaging]\" mkdocs-glightbox mkdocs-git-revision-date-localized-plugin",
     "dev": "mkdocs serve --watch-theme",
     "deploy": "mkdocs gh-deploy --clean --force",
-    "sync-docs": "cp ./repath-studio/CHANGELOG.md ./docs/roadmap/changelog.md && cp ./repath-studio/CONTRIBUTING.md ./docs/contribute/contributing.md && cp ./repath-studio/CODE_OF_CONDUCT.md ./docs/contribute/CODE_OF_CONDUCT.md && cp ./repath-studio/CLA.md ./docs/contribute/CLA.md && cp ./repath-studio/SECURITY.md ./docs/policies/security.md && cp ./repath-studio/LLM_POLICY.md ./docs/contribute/LLM_POLICY.md && cp ./repath-studio/schema-explorer/index.html ./docs/schema-explorer/index.html && cp ./repath-studio/schema-explorer/graph.dot ./docs/schema-explorer/graph.dot"
+    "sync-docs": "cp ./repath-studio/CHANGELOG.md ./docs/roadmap/changelog.md && cp ./repath-studio/CONTRIBUTING.md ./docs/contribute/contributing.md && cp ./repath-studio/CODE_OF_CONDUCT.md ./docs/contribute/CODE_OF_CONDUCT.md && cp ./repath-studio/CLA.md ./docs/contribute/CLA.md && cp ./repath-studio/SECURITY.md ./docs/policies/security.md && cp ./repath-studio/LLM_POLICY.md ./docs/contribute/LLM_POLICY.md && cp ./repath-studio/schema-explorer/index.html ./docs/schema-explorer/index.html && cp ./repath-studio/schema-explorer/graph.dot ./docs/schema-explorer/graph.dot",
+    "generate-roadmap": "node ./tools/roadmap-generator/index.js ./roadmap.conf.js ${ACCESS_TOKEN} -gs > ./docs/roadmap/milestones.md"
   },
   "devDependencies": {
-    "roadmap-generator": "0.0.3"
+    "@octokit/rest": "^22.0.1",
+    "bluebird": "^3.7.2",
+    "lodash": "^4.18.1",
+    "logplease": "^1.2.15",
+    "moment": "^2.31.0",
+    "moment-range": "^4.0.2",
+    "yargs": "^18.1.0"
   }
 }
