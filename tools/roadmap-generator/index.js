@@ -314,9 +314,7 @@ Promise.all(projects.map((project, i) => getMilestonesListForProject(client, pro
 
     console.log(`# Roadmap`)
     console.log("")
-    console.log(`This document describes the current status and the upcoming milestones of the ${organization} project.`)
-    console.log("")
-    console.log(`*Updated: ${new Date().toUTCString()}*`)
+    console.log(`This page describes the current status and the upcoming milestones of the project.`)
     console.log("")
 
     // console.log("## Table of Contents\n")
