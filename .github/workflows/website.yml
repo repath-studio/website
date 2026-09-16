@@ -55,6 +55,6 @@ jobs:
         env:
           ACCESS_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-          - run: npm run sync-docs
+      - run: npm run sync-docs
       - run: npm run install-python-deps
       - run: npm run deploy
