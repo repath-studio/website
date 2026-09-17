@@ -16,13 +16,13 @@ and creates an image element.
 
 ```clojure { .yaml .copy }
 (defn kitty
-  [[x y] width height]
+  [x y width height]
   (-> (js/fetch "https://api.thecatapi.com/v1/images/search" #js {:method "GET"})
       (.then (fn [response]
                (-> (.json response)
                    (.then (fn [body]
                             (let [body (js->clj body :keywordize-keys true)]
-                              (image [x y]
+                              (image x y
                                      width
                                      height
                                      (:url (first body))
@@ -34,7 +34,7 @@ The output should be `#'user/kitty`. The `kitty` function is now available for u
 user namespace. Try to generate a cat image by running the following command.
 
 ```clojure { .yaml .copy }
-(kitty [0 0] 350 350)
+(kitty 0 0 350 350)
 ```
 
 ![cat image](../assets/images/cat.png)
@@ -44,7 +44,7 @@ Wonderful! Now let's try to create a cat collage by creating a 5x5 image grid.
 ```clojure { .yaml .copy }
 (dotimes [x 5]
   (dotimes [y 5]
-    (kitty [(* x 100) (* y 100)] 100 100)))
+    (kitty (* x 100) (* y 100) 100 100)))
 
 ```
 
