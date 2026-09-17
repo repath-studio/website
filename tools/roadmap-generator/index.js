@@ -219,7 +219,7 @@ function generateMilestonesSummary(project, options) {
     else
       milestone += `| ${m.closed_issues} / ${m.total_issues} `
 
-    milestone += `| ${new Date(m.due_on).toDateString()} `
+    milestone += `| ${moment.utc(m.due_on).format('MMM DD YYYY')} `
     milestone += `|\n`
     return milestone
   }).join('')
@@ -260,7 +260,7 @@ function dataToMarkdown(projects, options) {
 
       milestone += (m.state === 'open' ? symbols.open : symbols.closed) + ` &nbsp;**${m.state.toUpperCase()}** &nbsp;&nbsp;`
       milestone += `${symbols.progress} &nbsp;&nbsp;**${m.closed_issues} / ${m.total_issues}** goals completed **(${progressPercentage}%)** &nbsp;&nbsp;`
-      milestone += `${symbols.date} &nbsp;&nbsp;**${new Date(m.due_on).toDateString()}**\n\n`
+      milestone += `${symbols.date} &nbsp;&nbsp;**${moment.utc(m.due_on).format('MMM DD YYYY')}**\n\n`
 
       if (opts.listGoalsPerMilestone) {
         milestone += `| Status | Goal | Labels |\n`
