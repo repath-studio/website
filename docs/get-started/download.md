@@ -5,7 +5,7 @@ binaries below.
 
 !!! warning
 
-    This project is in alpha stage!
+    This project is in beta stage!
 
 ## Select your operating system
 
