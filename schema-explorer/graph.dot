@@ -73,7 +73,7 @@ digraph {
   "NearestNeighbor" [label="{NearestNeighbor|:point [:ref \"Vec2\"]\l:base-point [:ref \"Vec2\"]\l:dist-squared number?\l}", fillcolor="#fff0cd"]
   "Orientation" [label="{Orientation|[:enum :vertical :horizontal]\l}", fillcolor="#fff0cd"]
   "Panel" [label="{Panel|:visible boolean?\l}", fillcolor="#fff0cd"]
-  "PanelId" [label="{PanelId|[:enum :tree :attributes :timeline :xml :history :repl-history]\l}", fillcolor="#fff0cd"]
+  "PanelId" [label="{PanelId|[:enum :tree :attributes :timeline :xml :history :shell-output]\l}", fillcolor="#fff0cd"]
   "PathCommand" [label="{PathCommand|[:enum \"M\" \"m\" \"L\" \"l\" \"H\" \"h\" \"V\" \"v\" \"C\" \"c\" \"S\" \"s\" \"Q\" \"q\" \"T\" \"t\" \"A\" \"a\" \"Z\" \"z\"]\l}", fillcolor="#fff0cd"]
   "PathManipulation" [label="{PathManipulation|[:enum :simplify :smooth :flatten :reverse]\l}", fillcolor="#fff0cd"]
   "PathPointType" [label="{PathPointType|[:enum :start-control-point :end-control-point :end-point]\l}", fillcolor="#fff0cd"]
