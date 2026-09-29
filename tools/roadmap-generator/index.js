@@ -55,12 +55,59 @@ const symbols = {
   // Issue status
   done: '✔', // completed
   notDone: '⏳', // in progress
+  canceled: '❌', // canceled / wontfix
   // Milestone status
-  open: '🚀', // active
+  open: '', // active
   closed: '🏁', // completed
   // Milestone details
   progress: '📋', // or 'Progress'
   date: '📅', // or 'Estimated Completion'
+}
+
+// Label names (matched case-insensitively) that drive the issue status icons.
+// Adjust these to match the labels actually used in the repository.
+const CANCELED_LABELS = ['canceled', 'cancelled', 'wontfix']
+const IN_PROGRESS_LABELS = ['in progress', 'in-progress', 'in_progress']
+
+// Shown in the Version column for shipped (closed) issues that have not yet
+// been cut into a release.
+const NEXT_RELEASE = 'upcoming'
+
+// Whether an issue was closed without being shipped (labeled
+// canceled/cancelled/wontfix).
+function isCanceledIssue(issue) {
+  const names = (issue.labels || []).map((label) => label.name.toLowerCase())
+  return names.some((name) => CANCELED_LABELS.includes(name))
+}
+
+// Status icon for a single issue. Canceled issues get the canceled icon,
+// in-progress issues get the notDone icon, completed issues (closed and not
+// canceled) keep the done icon, and everything else (open, not started) has
+// no icon.
+function issueIcon(issue) {
+  if (isCanceledIssue(issue))
+    return symbols.canceled
+  const names = (issue.labels || []).map((label) => label.name.toLowerCase())
+  if (names.some((name) => IN_PROGRESS_LABELS.includes(name)))
+    return symbols.notDone
+  if (issue.state !== 'open')
+    return symbols.done
+  return ''
+}
+
+// Version (release tag) an issue was introduced in. Open issues and issues
+// closed without being shipped (labeled canceled/wontfix) have no version.
+// Other closed issues map to the first release cut on or after the date they
+// were closed (see buildVersionLookup); ones closed after the most recent
+// release are marked as "Next release".
+function issueVersion(issue, versionFor) {
+  if (issue.state === 'open')
+    return ''
+  if (isCanceledIssue(issue))
+    return ''
+  if (!issue.closed_at || !versionFor)
+    return ''
+  return versionFor(issue.closed_at) || NEXT_RELEASE
 }
 
 /* GITHUB */
@@ -146,35 +193,140 @@ function fetchAllIssuesForRepo(client, repo) {
   return fetchPage(1)
 }
 
+// Fetch every tag in a repo. The API clamps per_page to 100 (as with issues),
+// so pages are fetched until a short page is returned.
+function fetchAllTagsForRepo(client, repo) {
+  const [owner, name] = repo.split('/')
+  function fetchPage(page) {
+    return client.request('GET /repos/{owner}/{repo}/tags', {
+      owner: owner,
+      repo: name,
+      per_page: GITHUB_PAGE_SIZE,
+      page: page
+    })
+      .then((res) => {
+        if (res.data.length < GITHUB_PAGE_SIZE)
+          return res.data
+        return fetchPage(page + 1).then((rest) => res.data.concat(rest))
+      })
+  }
+  return fetchPage(1)
+}
+
+// Resolve each tag to the date its release commit was made (the moment that
+// version was cut) and return a function that maps an issue's close date to
+// the first release cut on or after that date i.e. the version the issue
+// was introduced in. Issues closed after the most recent release map to ''
+// (not yet released).
+function buildVersionLookup(client, repo, tags) {
+  const [owner, name] = repo.split('/')
+  return Promise.map(tags, (tag) => {
+    return client.request('GET /repos/{owner}/{repo}/commits/{sha}', {
+      owner: owner,
+      repo: name,
+      sha: tag.commit.sha
+    })
+      .then((res) => ({
+        name: tag.name,
+        date: moment.utc(res.data.commit.committer.date)
+      }))
+  }, { concurrency: 16 })
+    .then((releases) => {
+      // Oldest release first so the first match is the introducing version.
+      releases.sort((a, b) => a.date.valueOf() - b.date.valueOf())
+      return (closedAt) => {
+        const closed = moment.utc(closedAt).valueOf()
+        for (const release of releases) {
+          if (release.date.valueOf() >= closed)
+            return release.name
+        }
+        return ''
+      }
+    })
+}
+
+// Sort a milestone's issues: shipped (closed, not canceled) issues come
+// first with the most recently closed on top, then open issues (oldest
+// created first), with canceled issues at the bottom (most recently closed
+// first).
+function sortMilestoneIssues(issues) {
+  const toTime = (value) => (value ? moment.utc(value).valueOf() : null)
+  // Group rank: shipped closed issues first, open issues in the middle,
+  // canceled issues last.
+  const rank = (issue) => {
+    if (isCanceledIssue(issue))
+      return 2
+    if (issue.state === 'open')
+      return 1
+    return 0
+  }
+  issues.sort((a, b) => {
+    const aRank = rank(a)
+    const bRank = rank(b)
+    if (aRank !== bRank)
+      return aRank - bRank
+    if (aRank === 1) {
+      // Order open issues by creation date (oldest first)
+      const atA = toTime(a.created_at) || 0
+      const atB = toTime(b.created_at) || 0
+      return atA - atB
+    }
+    // Order closed issues by when they were closed (most recent first,
+    // missing close dates last)
+    const atA = toTime(a.closed_at) || Number.MIN_SAFE_INTEGER
+    const atB = toTime(b.closed_at) || Number.MIN_SAFE_INTEGER
+    return atB - atA
+  })
+}
+
 function getAllMilestoneIssues(client, project) {
   logger.log(`-- Generate issues list for '${project.name}' --`)
   let result = _.cloneDeep(project)
+  // Release tags are only fetched when the goals are listed, since they are
+  // only used to derive the version each goal was introduced in.
+  const wantVersions = !!argv.goals
   return Promise.map(project.repos, (repo) => {
     logger.log(`Get issues from ${repo}`)
-    return fetchAllIssuesForRepo(client, repo)
-      .then((issues) => {
+    const versionPromise = wantVersions
+      ? fetchAllTagsForRepo(client, repo).then((tags) => buildVersionLookup(client, repo, tags))
+      : Promise.resolve(null)
+    return Promise.all([
+      fetchAllIssuesForRepo(client, repo),
+      versionPromise
+    ])
+      .then(([issues, versionFor]) => {
         logger.log(`Found ${issues.length} issues in ${repo}`)
-        return { repo: repo, issues: issues }
+        return { repo: repo, issues: issues, versionFor: versionFor }
       })
   }, { concurrency: 16 })
     .then((res) => {
-      res.forEach((repo) => {
-        repo.issues.forEach((e) => {
+      res.forEach((r) => {
+        r.issues.forEach((e) => {
           if (e.milestone) {
             const milestone = result.milestones[e.milestone.title]
             if (milestone) {
               milestone.issues.push({
                 title: e.title,
-                repo: repo.repo,
+                repo: r.repo,
                 html_url: e.html_url,
                 repository_url: e.repository_url,
                 state: e.state,
-                labels: e.labels
+                labels: e.labels,
+                // Version (release tag) the issue was introduced in, derived
+                // from its close date and the repo's release tags.
+                version: issueVersion(e, r.versionFor),
+                // Kept for ordering only: closed issues are listed in the
+                // order they were closed (see sortMilestoneIssues)
+                closed_at: e.closed_at,
+                created_at: e.created_at
               })
             }
           }
         })
       })
+      // List shipped closed issues first (most recent first), open issues
+      // next, canceled issues last
+      Object.keys(result.milestones).forEach((k) => sortMilestoneIssues(result.milestones[k].issues))
       return result
     })
 }
@@ -211,7 +363,7 @@ function generateMilestonesSummary(project, options) {
 
     let milestone = ''
     // Marker class so extra.css can highlight the active milestone row
-    milestone += `| <span class="milestone-state milestone-state-${m.state}">${m.state === 'open' ? symbols.open : symbols.closed}</span> `
+    milestone += `| <span>${m.state === 'open' ? symbols.open : symbols.closed}</span> `
     milestone += `| **[${m.title}](#${nameToAnchor(m.title)})** `
 
     if (opts.useVisualProgressBars)
@@ -263,12 +415,12 @@ function dataToMarkdown(projects, options) {
       milestone += `${symbols.date} &nbsp;&nbsp;**${moment.utc(m.due_on).format('MMM DD YYYY')}**\n\n`
 
       if (opts.listGoalsPerMilestone) {
-        milestone += `| Status | Goal | Labels |\n`
-        milestone += `| :---: | :--- | --- |\n`
+        milestone += `| Status | Goal | Version |\n`
+        milestone += `| :---: | :--- | :---: |\n`
         milestone += m.issues.map((issue, idx) => {
-          let text = `| ${issue.state === 'open' ? symbols.notDone : symbols.done} `
+          let text = `| ${issueIcon(issue)} `
           text += `| [${issue.title}](${issue.html_url}) `
-          text += issue.labels.length > 0 ? `| ` + issue.labels.map((label) => `\`${label.name}\``).join(', ') : '| '
+          text += issue.version ? `| \`${issue.version}\`` : '| '
           text += '|\n'
           return text
         }).join('') + '\n'
