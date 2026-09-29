@@ -219,8 +219,3 @@ body {
         width: 200px;
     }
 }
-
-/* Roadmap: highlight the active (open) milestone row in the Milestone Summary table */
-.md-typeset table:not([class]) tr:has(> td .milestone-state-open) {
-    background-color: rgba(18, 151, 49, 0.1);
-}
