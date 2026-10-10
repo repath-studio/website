@@ -906,6 +906,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#errors-and-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errors and warnings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#upgrading-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -928,12 +939,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#clojure-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -941,6 +947,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1811,6 +1822,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#errors-and-warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Errors and warnings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#upgrading-dependencies" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1833,12 +1855,7 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
+          <li class="md-nav__item">
   <a href="#clojure-packages" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1846,6 +1863,11 @@
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1991,6 +2013,9 @@ are selectively applied to pure and critical namespaces, such as utils and
 handlers. By default, function schemas are instrumented only during tests to
 avoid performance overhead. However, runtime instrumentation can also be enabled
 in the development environment (see <code>dev.cljs</code>).</p>
+<h2 id="errors-and-warnings">Errors and warnings<a class="headerlink" href="#errors-and-warnings" title="Permanent link">¶</a></h2>
+<p>We have a zero error and warning policy. Changes should not introduce any of
+those. That applies to the browser console, and to the build output.</p>
 <h2 id="upgrading-dependencies">Upgrading dependencies<a class="headerlink" href="#upgrading-dependencies" title="Permanent link">¶</a></h2>
 <h3 id="npm-packages">NPM packages<a class="headerlink" href="#npm-packages" title="Permanent link">¶</a></h3>
 <p>Running <code>npm run upgrade</code> automatically upgrades <code>package.json</code> dependencies to
@@ -2012,7 +2037,7 @@ resolution issues that may arise. The most common problem is upgrading
 <code>@sentry/react</code> because <code>@sentry/capacitor</code> usually depends on an older version.</p>
 <p>Before pushing those changes, we need to test all related functionality to
 ensure that there are no regressions.</p>
-<h2 id="clojure-packages">Clojure packages<a class="headerlink" href="#clojure-packages" title="Permanent link">¶</a></h2>
+<h3 id="clojure-packages">Clojure packages<a class="headerlink" href="#clojure-packages" title="Permanent link">¶</a></h3>
 <p>We can check for outdated Clojure dependencies by running <code>clojure -M:outdated</code>.
 There is an automated action that runs this check once a week.</p>
 <h2 id="useful-development-shortcuts">Useful development shortcuts<a class="headerlink" href="#useful-development-shortcuts" title="Permanent link">¶</a></h2>
