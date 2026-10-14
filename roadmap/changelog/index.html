@@ -984,6 +984,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#0424-2026-10-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.4.24 (2026-10-14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#0423-2026-10-02" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1958,6 +1969,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
+  <a href="#0424-2026-10-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        0.4.24 (2026-10-14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#0423-2026-10-02" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2431,10 +2453,48 @@
 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">¶</a></h1>
 <p>All notable user facing changes to this project will be documented here.
 The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>.</p>
+<h2 id="0424-2026-10-14">0.4.24 (2026-10-14)<a class="headerlink" href="#0424-2026-10-14" title="Permanent link">¶</a></h2>
+<p><strong>Added</strong></p>
+<ul>
+<li>Handle viewBox attribute <a href="https://github.com/repath-studio/repath-studio/pull/222">#222</a></li>
+<li>Clipboard enhancements <a href="https://github.com/repath-studio/repath-studio/pull/225">#225</a></li>
+<li>Enhanced text content elements <a href="https://github.com/repath-studio/repath-studio/pull/221">#221</a></li>
+<li>Handle transform attribute <a href="https://github.com/repath-studio/repath-studio/pull/226">#226</a></li>
+<li>Rotate handle to selection (holding <code>Ctrl</code> snaps to 15° increments)</li>
+<li>Popover that helps manual editing translate, rotate, scale, skew, matrix</li>
+<li>Ungrouping applies the group transform to its children</li>
+<li>Flip and rotate shell commands</li>
+<li>Menu actions under <code>Object -&gt; Transform</code> for<ul>
+<li>Rotate 90° clockwise/counterclockwise</li>
+<li>Flip horizontally/vertically (<code>Shift+H</code>, <code>Shift+V</code>)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Removed</strong></p>
+<ul>
+<li>Mikera core matrix dependency <a href="https://github.com/repath-studio/repath-studio/pull/223">#223</a></li>
+</ul>
+<p><strong>Changed</strong></p>
+<ul>
+<li>Actions that use the <code>Ctrl</code> modifier now use <code>⌘</code> on Mac</li>
+<li>Holding <code>Shift</code> while using the mouse wheel inverts the scroll direction</li>
+<li>Grouping elements creates the group on the top common ancestor, and at the
+  index of the last (top) grouped element</li>
+<li>Allow clearing the <code>multiple</code> attribute value using the remove button</li>
+<li>Show icons on select input and add linejoin icons</li>
+<li>Enhance labels of toggle actions on command dialog</li>
+<li>Enhance handle readability</li>
+</ul>
+<p><strong>Fixed</strong></p>
+<ul>
+<li>Handle highlight on hover <a href="https://github.com/repath-studio/repath-studio/pull/224">#224</a></li>
+<li>Finalize selection on right click</li>
+<li>Incorrect bounds from <code>defs</code> removed</li>
+</ul>
 <h2 id="0423-2026-10-02">0.4.23 (2026-10-02)<a class="headerlink" href="#0423-2026-10-02" title="Permanent link">¶</a></h2>
 <p><strong>Added</strong></p>
 <ul>
-<li>Native context menu on desktop for editable areas and highlighted text <a href="https://github.com/repath-studio/repath-studio/pull/216">#216</a></li>
+<li>Native context menu on desktop for editable areas and highlighted text c</li>
 <li>App db migrations <a href="https://github.com/repath-studio/repath-studio/pull/217">#217</a></li>
 <li>Keyboard shortcut enhancements <a href="https://github.com/repath-studio/repath-studio/pull/218">#218</a></li>
 <li>Path as title on mouse over document tab when available</li>
