@@ -57,7 +57,7 @@ const symbols = {
   notDone: '⏳', // in progress
   canceled: '❌', // canceled / wontfix
   // Milestone status
-  open: '', // active
+  open: '🚀', // active
   closed: '🏁', // completed
   // Milestone details
   progress: '📋', // or 'Progress'
