@@ -5,23 +5,26 @@
 ## Install
 
 Setup a new virtual environment
-```
+
+```bash
 python -m venv .venv
 ```
 
 Activate the environment
-```
-python -m venv .venv
+
+```bash
+source .venv/bin/activate
 ```
 
-Install MkDocs Material
-```
-npm run install-python-deps
-```
+Install Python packages
 
+```bash
+pip install -r requirements.txt
+```
 
 Clone the required docs
-```
+
+```bash
 npm run sync-docs
 ```
 
